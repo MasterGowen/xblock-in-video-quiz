@@ -151,5 +151,6 @@ function InVideoQuizXBlock(runtime, element) {
             });
           }
         });
+        debugger;
     }
 }

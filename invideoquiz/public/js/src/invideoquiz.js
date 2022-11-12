@@ -43,11 +43,13 @@ function InVideoQuizXBlock(runtime, element) {
     });
 
     function setUpStudentView(component) {
+        console.log('component:', component)
         var componentIsVideo = component.data('id').indexOf(videoId) !== -1;
         if (componentIsVideo) {
             video = $('.video', component);
         } else {
             $.each(problemTimesMap, function (time, componentId) {
+                console.log("time, componentId:", time, componentId)
                 if (component.data('id').indexOf(componentId) !== -1) {
                     component.addClass('in-video-problem-wrapper');
                     $('.xblock-student_view', component).append(extraVideoButton).addClass('in-video-problem').hide();
@@ -151,6 +153,6 @@ function InVideoQuizXBlock(runtime, element) {
             });
           }
         });
-        debugger;
+
     }
 }

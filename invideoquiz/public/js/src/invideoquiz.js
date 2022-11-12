@@ -49,7 +49,7 @@ function InVideoQuizXBlock(runtime, element) {
             video = $('.video', component);
         } else {
             $.each(problemTimesMap, function (time, componentId) {
-                console.log("time, componentId:", time, componentId)
+                console.log("time, componentId, indexOf:", time, componentId, component.data('id').indexOf(componentId))
                 if (component.data('id').indexOf(componentId) !== -1) {
                     component.addClass('in-video-problem-wrapper');
                     $('.xblock-student_view', component).append(extraVideoButton).addClass('in-video-problem').hide();

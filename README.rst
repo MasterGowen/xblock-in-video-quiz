@@ -1,44 +1,41 @@
-In Video Quiz XBlock |BS| |CA|
+Видео-викторина XBlock |BS| |CA|
 ==============================
 
-This XBlock allows for edX components to be displayed to users inside of videos at specific time points.
+Этот XBlock позволяет отображать компоненты edX пользователям внутри видео в определенные моменты времени.
 
-Installation
+Установка
 ------------
 
-Install the requirements into the python virtual environment of your
-``edx-platform`` installation by running the following command from the
-root folder:
+Установите зависимости в виртуальную среду python вашей установки `edx-platform`,
+выполнив следующую команду из корневой папки:
 
 .. code:: bash
 
     $ pip install -r requirements.txt
 
-Enabling in Studio
+Включение в Студии
 ------------------
 
-You can enable the In Video Quiz XBlock in Studio through the
-advanced settings.
+Вы можете включить видео-викторину в студии с помощью
+дополнительных настроек.
 
-1. From the main page of a specific course, navigate to
-   ``Settings ->    Advanced Settings`` from the top menu.
-2. Check for the ``advanced_modules`` policy key, and add
-   ``"invideoquiz"`` to the policy value list.
-3. Click the "Save changes" button.
+1. На главной странице конкретного курса перейдите к
+`Настройки -> Расширенные настройки` в верхнем меню.
+2. Проверьте наличие ключа политики `Список дополнительных модулей` и добавьте
+`"invideoquiz"` в список значений политики.
+3. Нажмите кнопку "Сохранить изменения".
 
-Package Requirements
+Требования к упаковке
 --------------------
+setup.py содержит список зависимостей пакета, которые требуются для этого пакета XBlock.
+Этот список используется для устранения зависимостей, когда вышестоящий проект использует
+этот пакет XBlock. requirements.txt используется для установки тех же зависимостей при запуске
+тестов для этого пакета.
 
-setup.py contains a list of package dependencies which are required for this XBlock package.
-This list is what is used to resolve dependencies when an upstream project is consuming
-this XBlock package. requirements.txt is used to install the same dependencies when running
-the tests for this package.
-
-License
+Лицензия
 -------
 
-The In Video Quiz XBlock is available under the AGPL Version 3.0 License.
-
+Видео-викторина XBlock доступна под лицензией AGPL версии 3.0.
 
 .. |BS| image:: https://travis-ci.org/Stanford-Online/xblock-in-video-quiz.svg
   :target: https://travis-ci.org/Stanford-Online/xblock-in-video-quiz
